@@ -1,28 +1,35 @@
 :root {
 
-    /* Primary */
+  /* Colors */
 
-    --soft-blue: hsl(215, 51%, 70%);
-    --cyan: hsl(178, 100%, 50%);
+  --cyan-400: hsl(178, 100%, 50%);
+  --soft-blue-100: hsl(215, 51%, 70%);
 
-    /* Neutral */
+  --dark-blue-800: hsl(217, 54%, 11%);
+  --dark-blue-700: hsl(216, 50%, 16%);
+  --dark-blue-600: hsl(215, 32%, 27%);
 
-    --clr-white-100: hsl(0, 0%, 100%);
+  --white-100: hsl(0, 0%, 100%);
 
+  /* Component */
 
-    --main-bg: hsl(217, 54%, 11%);
-    --card-bg: hsl(216, 50%, 16%);
-    --line: hsl(215, 32%, 27%);
+  --clr-main-bg: var(--dark-blue-800);
+  --clr-card-bg: var(--dark-blue-700);
+  --clr-accent: var(--dark-blue-600);
 
-    /* Font size */
+  --clr-text-primary: var(--soft-blue-100);
+  --clr-text-accent: var(--cyan-400);
+  --clr-text-title: var(--white-100);
 
-    --fs-400: 1.1rem;
+  /* Font size */
 
-    /* Font weight */
+  --fs-400: 1.1rem;
 
-    --fw-light: 300;
-    --fw-regular: 400;
-    --fw-bold: 600;
+  /* Font weight */
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 600;
 
 }
 
@@ -32,14 +39,14 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*
   2. Remove default margin
 */
 * {
-    margin: 0;
+  margin: 0;
 }
 
 /*
@@ -47,7 +54,7 @@
 */
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 /*
@@ -56,8 +63,8 @@ body {
   5. Improve text rendering
 */
 body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 /*
@@ -68,8 +75,8 @@ picture,
 video,
 canvas,
 svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 /*
@@ -79,7 +86,7 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
 /*
@@ -92,7 +99,7 @@ h3,
 h4,
 h5,
 h6 {
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /*
@@ -100,9 +107,36 @@ h6 {
 */
 #root,
 #__next {
-    isolation: isolate;
+  isolation: isolate;
 }
 
 body {
-    font-family: 'Outfit', sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: var(--clr-main-bg);
+  color: var(--clr-text-primary);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-regular);
+  font-family: 'Outfit', sans-serif;
+}
+
+.card {
+  background-color: var(--clr-card-bg);
+}
+
+.card__title {
+  color: var(--white-100);
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__price>p {
+  color: var(--cyan-400);
+}
+
+.card__author--span {
+  color: var(--white-100);
 }
