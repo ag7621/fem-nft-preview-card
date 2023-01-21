@@ -25,7 +25,7 @@
   --fs-300: 0.9375rem;
   --fs-400: 1rem;
   --fs-500: 1.1rem;
-  --fs-600: 1.3rem;
+  --fs-600: 1.375rem;
 
   /* Font weight */
 
@@ -135,6 +135,7 @@ body {
   padding: var(--content-padding);
   background-color: var(--clr-card-bg);
   border-radius: 1rem;
+  max-width: 20.5rem;
 }
 
 .card__img {
@@ -157,80 +158,18 @@ body {
   font-weight: var(--fw-bold);
 }
 
-.card__avatar {
-  border-radius: 100%;
-  border: 1px solid var(--white-100);
-  height: 2rem;
-}
-
-.card__author {
-  color: var(--clr-text-title);
-}
-
-/* body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--clr-main-bg);
-  color: var(--clr-text-primary);
-  font-size: var(--fs-300);
+.card__time {
   font-weight: var(--fw-regular);
-  font-family: 'Outfit', sans-serif;
-}
-
-.card {
-  background-color: var(--clr-card-bg);
-  border-radius: 15px;
-  width: 20.25rem;
-  padding: 1.5rem;
-}
-
-.card__img {
-  border-radius: 10px;
-}
-
-.card__title {
-  color: var(--clr-text-title);
-  margin-top: 1.4rem;
-}
-
-.card__description {
-  margin-top: 0.7rem;
-  font-weight: var(--fw-light);
-}
-
-.card__info {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--clr-accent);
-  padding: 1rem 0;
-}
-
-.card__price-price {
-  color: var(--clr-text-accent);
-  font-weight: var(--fw-bold);
-}
-
-.card__author {
-  margin-top: 1rem;
-  font-weight: var(--fw-light);
 }
 
 .card__avatar {
-  border: 1px solid var(--white-100);
   border-radius: 100%;
+  border: 1px solid var(--white-100);
   height: 2rem;
-  margin-right: 0.5rem;
 }
 
-.card__author--span {
-  color: var(--white-100);
-}
-
-.flex-class {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.card__author-name {
+  color: var(--clr-text-title);
 }
 
 @media (min-width: 768px) {
@@ -240,30 +179,26 @@ body {
   }
 
   .card {
-    width: 22rem;
+    max-width: 21.875rem;
+    padding: 1.5rem 1.5rem 2rem;
   }
 
   .card__title {
+    margin-top: 0.5rem;
     font-size: var(--fs-600);
-    margin-top: 1.3rem;
-    letter-spacing: 0.5px;
-  }
-
-  .card__description {
-    margin-top: 1rem;
-    line-height: 1.3;
   }
 
   .card__info {
     font-size: var(--fs-400);
-    padding: 1.3rem 0;
+    padding-bottom: 1.4rem;
+  }
+
+  .card__avatar {
+    height: 2.1rem;
+    margin-right: 0.5rem;
   }
 
   .card__author {
     font-size: var(--fs-400);
   }
-
-  .card__avatar {
-    height: 2.1rem;
-  }
-} */
+}
